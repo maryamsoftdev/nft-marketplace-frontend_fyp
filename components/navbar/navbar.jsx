@@ -19,7 +19,23 @@ const navbar = () => {
     const [profile, setProfile] = useState(false);
     const [openSideMenu, setOpenSideMenu] = useState(false);
   return (
-    <div>navbar</div>
+   <div className='Style.navbar'>
+    <div className='Style.navbar_container'>
+        <div className='Style.navbar_container_left'>
+            <div className='Style.logo'>
+                <img src={images.logo} alt="NFT MARKETPLACE" width={100} height={100}/>
+            </div>
+            <div className='Style.navbar_container_left_box_input'>
+                <div className='Style.navbar_container_left_box_input_box'>
+                    <input type="text" placeholder='Search NFT'/>
+                    <BsSearch onClick={()=>{}} className='Style.search_icon'/>
+                </div>
+            </div>
+        </div>
+        //END OF LEFT SECTIO OF NAVIGATION BAR
+        <div className='Style.navbar_container_right'></div>
+    </div>
+   </div>
   )
 }
 
