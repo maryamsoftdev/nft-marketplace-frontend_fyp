@@ -18,22 +18,58 @@ const navbar = () => {
     const [notification, setNotification] = useState(false);
     const [profile, setProfile] = useState(false);
     const [openSideMenu, setOpenSideMenu] = useState(false);
+
+    const openMenu = (e)=>{
+        const btnTxt = e.target.innerText;
+        if (btnTxt == "Discover"){
+            setDiscover(true);
+            setHelp(false);
+            setNotification(False);
+            setProfile(false);
+        }
+        else if(btnTxt=="help Center"){
+            setDiscover(false);
+            setHelp(true);
+            setNotification(false);
+            setProfile(false);
+
+        }
+        else{
+            setDiscover(false);
+            setHelp(false);
+            setNotification(false);
+            setProfile(false);
+
+        }
+    };
+
   return (
-   <div className='Style.navbar'>
-    <div className='Style.navbar_container'>
-        <div className='Style.navbar_container_left'>
-            <div className='Style.logo'>
+   <div className={Style.navbar}>
+    <div className={Style.navbar_container}>
+        <div className={Style.navbar_container_left}>
+            <div className={Style.logo}>
                 <img src={images.logo} alt="NFT MARKETPLACE" width={100} height={100}/>
             </div>
-            <div className='Style.navbar_container_left_box_input'>
-                <div className='Style.navbar_container_left_box_input_box'>
+            <div className={Style.navbar_container_left_box_input}>
+                <div className={Style.navbar_container_left_box_input_box}>
                     <input type="text" placeholder='Search NFT'/>
-                    <BsSearch onClick={()=>{}} className='Style.search_icon'/>
+                    <BsSearch onClick={()=>{}} className={Style.search_icon}/>
                 </div>
             </div>
         </div>
         //END OF LEFT SECTIO OF NAVIGATION BAR
-        <div className='Style.navbar_container_right'></div>
+        <div className={Style.navbar_container_right}>
+            <div className={Style.navbar_container_right_discover}>
+               {/* //DISCOVER MENU */}
+                <p onClick={(e)=>openMenu(e)}>Discover</p>
+                { discover &&(
+                      <div className={Style.navbar_container_right_discover_box}>
+                      <Discover/>
+                  </div>
+                )}
+              
+            </div>
+        </div>
     </div>
    </div>
   )
