@@ -8,8 +8,16 @@ import {CgMenuLeft, CgMenuRight} from "react-icons/cg";
 
 import {discover,helpCenter,notification,profile,sideBar} from "./index"
 import {button} from '../component-index';
+import images from '../../images';
+
+
 
 const navbar = () => {
+    const [discover, setDiscover] = useState(false);
+    const [help, setHelp] = useState(false);
+    const [notification, setNotification] = useState(false);
+    const [profile, setProfile] = useState(false);
+    const [openSideMenu, setOpenSideMenu] = useState(false);
   return (
     <div>navbar</div>
   )
