@@ -6,13 +6,14 @@ import {MdNotifications} from "react-icons/md";
 import {BsSearch} from "react-icons/bs";
 import {CgMenuLeft, CgMenuRight} from "react-icons/cg";
 
-import {discover,helpCenter,notification,profile,sideBar} from "./index"
+import {Discover,HelpCenter,Notification,Profile,SideBar} from "./index"
 import {button} from '../component-index';
 import images from '../../images';
 
 
 
 const navbar = () => {
+    //use state components
     const [discover, setDiscover] = useState(false);
     const [help, setHelp] = useState(false);
     const [notification, setNotification] = useState(false);
@@ -43,6 +44,35 @@ const navbar = () => {
         }
     };
 
+    const openNotification =()=>{
+        if(!notification){
+            setNotification(true);
+            setDiscover(false);
+            setHelp(false);
+            setProfile(false);
+        }else {
+            setNotification(false);
+            
+        }
+    };
+    const openProfile =()=>{
+        if(!profile){
+            setProfile(true)
+            setNotification(false);
+            setDiscover(false);
+            setHelp(false);
+        }else{
+            setProfile(false);
+        }
+    };
+    const openSideBar =()=>{
+        if(!openSideMenu){
+        setOpenSideMenu(true);
+        } else{
+            setOpenSideMenu(false);
+        }
+    };
+
   return (
    <div className={Style.navbar}>
     <div className={Style.navbar_container}>
@@ -57,7 +87,7 @@ const navbar = () => {
                 </div>
             </div>
         </div>
-        //END OF LEFT SECTIO OF NAVIGATION BAR
+        {/* //END OF LEFT SECTIO OF NAVIGATION BAR */}
         <div className={Style.navbar_container_right}>
             <div className={Style.navbar_container_right_discover}>
                {/* //DISCOVER MENU */}
@@ -69,8 +99,51 @@ const navbar = () => {
                 )}
               
             </div>
+            //HelpCenter
+            <div className={style.navbar_container_right_help}>
+            <p onClick={(e)=>openMenu(e)}>Help Center</p> 
+            { discover &&(
+                      <div className={Style.navbar_container_right_help_box}>
+                      <HelpCenter/>
+                  </div>
+                )}
+            </div>
+            {/* //Notification */}
+            <div className={style.navbar_container_right_notify}>
+            <MdNotifications className ={style.notify} 
+            onClick={()=> openNotification}/>
+            {notification && <Notification/>}
+            </div>
+            //create button section
+            <div className ={Style.navbar_container_right_button}>
+            <Button btnTxt="Create"/>
+            </div>
+
+            {/* //user profile */}
+            <div className={Style.navbar_container_right_profile_box}>
+                <div className={Style.navbar_container_right_profile}>
+                    <image src={images.user1} alt = "profile" width={40} height={40} onClick={()=>openProfile()}
+                    className={Style.navbar_container_right_profile}/>
+                    {profile && <Profile/>}
+                </div>
+            </div>
+            {/* menu button */}
+            <div className={Style.navbar_container_right_menuBtn}>
+                <CgMenuRight className={Style.menuIcon}
+                onClick={()=>openSideBar()}
+                />
+            </div>
         </div>
     </div>
+    {/* SideBar componenet */}
+    {
+        openSideMenu && (
+            <div className={Style.SideBar}>
+                <SideBar setOpenSideMenu={setOpenSideMenu}/>
+            </div>
+        )
+    }
+
    </div>
   )
 }
