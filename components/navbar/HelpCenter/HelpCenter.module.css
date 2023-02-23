@@ -1,11 +1,9 @@
-
-.discover{
+.helpCenter{
     padding: .5rem 1rem;
-    transition:  all .3s ease-in;
-    z-index: 2222222222;
+    transition: all .3s ease-in;
 }
 
-.discover:hover{
+.helpCenter:hover{
     background-color: var(--icons-color);
     color: var(--shadow-dark-color);
     border-radius: .3rem;

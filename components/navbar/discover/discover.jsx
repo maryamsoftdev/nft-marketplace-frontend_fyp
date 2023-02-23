@@ -1,45 +1,54 @@
-import React from 'react'
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-//INTERNAL IMPORTS
-import Style from './discover.module.css';
+//INTERNAL IMPORT
+import Style from "./Discover.module.css";
+
 const Discover = () => {
-
-const discover =[
-  { name: "collection",
-   link: "collection"
- },
-  { name: "search",
-   link: "search"
- },
-  
-  { name: "author profile",
-   link: "author_profile"
- },
-  { name: "NFT Detail",
-   link: "NFT-detail"
- },
-  { name: "account setting",
-   link: "account_setting"
- },
-  { name: "Connect Wallet",
-   link: "connect_wallet"
- },
-  { name: "Blog",
-   link: "Blog"
- },
-  
-]
-
+  //--------DISCOVER NAVIGATION MENU
+  const discover = [
+    {
+      name: "Collection",
+      link: "collection",
+    },
+    {
+      name: "Search",
+      link: "searchPage",
+    },
+    {
+      name: "Author Profile",
+      link: "author",
+    },
+    {
+      name: "NFT Details",
+      link: "NFT-details",
+    },
+    {
+      name: "Account Setting",
+      link: "account",
+    },
+    {
+      name: "Upload NFT",
+      link: "uploadNFT",
+    },
+    {
+      name: "Connect Wallet",
+      link: "connectWallet",
+    },
+    {
+      name: "Blog",
+      link: "blog",
+    },
+  ];
   return (
     <div>
-      {discover.map((el,i)=>(
-        <div key={i+1} className={Style.discover}>
-        <Link href={{pathname:`${el.link}`}}>{el.name}</Link>
+      {discover.map((el, i) => (
+        <div key={i + 1} className={Style.discover}>
+          <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Discover
+export default Discover;
