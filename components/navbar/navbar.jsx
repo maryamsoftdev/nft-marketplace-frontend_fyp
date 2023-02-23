@@ -6,13 +6,17 @@ import {MdNotifications} from "react-icons/md";
 import {BsSearch} from "react-icons/bs";
 import {CgMenuLeft, CgMenuRight} from "react-icons/cg";
 
-import {Discover,HelpCenter,Notification,Profile,SideBar} from "./index"
-import {button} from '../component-index';
+// import {Discover,HelpCenter,Notification,Profile,SideBar} from "./index"
+// import {Button} from '../component-index';
+import Button from '../button/button'
 import images from '../../images';
+import Discover from './discover/discover';
+import Profile from './profile/profile';
+import SideBar from './side-bar/side-bar';
+import Notification from './notification/notification';
 
 
-
-const navbar = () => {
+const Navbar = () => {
     //use state components
     const [discover, setDiscover] = useState(false);
     const [help, setHelp] = useState(false);
@@ -91,7 +95,7 @@ const navbar = () => {
         <div className={Style.navbar_container_right}>
             <div className={Style.navbar_container_right_discover}>
                {/* //DISCOVER MENU */}
-                <p onClick={(e)=>openMenu(e)}>Discover</p>
+                {/* <p onClick={(e)=>openMenu(e)}>Discover</p> */}
                 { discover &&(
                       <div className={Style.navbar_container_right_discover_box}>
                       <Discover/>
@@ -99,9 +103,9 @@ const navbar = () => {
                 )}
               
             </div>
-            //HelpCenter
-            <div className={style.navbar_container_right_help}>
-            <p onClick={(e)=>openMenu(e)}>Help Center</p> 
+            {/* //HelpCenter */}
+            <div className={Style.navbar_container_right_help}>
+            {/* <p onClick={(e)=>openMenu(e)}>Help Center</p>  */}
             { discover &&(
                       <div className={Style.navbar_container_right_help_box}>
                       <HelpCenter/>
@@ -109,12 +113,12 @@ const navbar = () => {
                 )}
             </div>
             {/* //Notification */}
-            <div className={style.navbar_container_right_notify}>
-            <MdNotifications className ={style.notify} 
+            <div className={Style.navbar_container_right_notify}>
+            <MdNotifications className ={Style.notify} 
             onClick={()=> openNotification}/>
             {notification && <Notification/>}
             </div>
-            //create button section
+            {/* //create button section */}
             <div className ={Style.navbar_container_right_button}>
             <Button btnTxt="Create"/>
             </div>
@@ -148,4 +152,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
