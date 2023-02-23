@@ -7,6 +7,7 @@ const App =({ Component, pageProps })=> (
     <div>
     <Navbar/>
     <Component {...pageProps} />
+    {/* <HeroSection/> */}
     <Footer/>
     </div>
 );
