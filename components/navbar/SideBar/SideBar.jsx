@@ -16,7 +16,7 @@ import { DiJqueryLogo } from "react-icons/di";
 
 //INTERNAL IMPORT
 import Style from "./SideBar.module.css";
-import images from "../../../images";
+import images from "../../../img";
 import Button from "../../Button/Button";
 import { Router } from "next/router";
 
@@ -114,7 +114,7 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
       />
 
       <div className={Style.sideBar_box}>
-        {/* <Image src={images.logo} alt="logo" width={150} height={150} /> */}
+        <Image src={images.logo} alt="logo" width={150} height={150} />
         <p>
           <a href="/">
             <DiJqueryLogo className={Style.sideBar_box_logo} />
@@ -186,14 +186,14 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        {currentAccount == "" ? (
+       
+        {/* {currentAccount == "" ? (
           <Button btnName="connect" handleClick={() => connectWallet()} />
-        ) : (
-          <Button
-            btnName="Create"
-            handleClick={() => router.push("/uploadNFT")}
-          />
-        )}
+        ) : ( */}
+          <Button btnName="Create" handleClick={() =>{}}/>
+          {/* // <Button btnName="Create" handleClick={() => router.push("/uploadNFT")} */}
+          {/* // /> */}
+        {/* )} */}
 
         <Button btnName="Connect Wallet" handleClick={() => {}} />
       </div>

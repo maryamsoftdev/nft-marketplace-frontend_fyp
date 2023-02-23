@@ -11,9 +11,8 @@ import { useRouter } from "next/router";
 //INTERNAL IMPORT
 import Style from "./NavBar.module.css";
 import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
-// import { Button, Error } from "../componentsindex";
-import { Button } from "../component-index";
-import images from "../../images";
+import { Button, Error } from "../component-index";
+import images from "../../img";
 
 //IMPORT FROM SMART CONTRACT
 // import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
@@ -78,7 +77,7 @@ const NavBar = () => {
     }
   };
 
-  //SMART CONTRACT SECTION
+//   //SMART CONTRACT SECTION
 //   const { currentAccount, connectWallet, openError } = useContext(
 //     NFTMarketplaceContext
 //   );
@@ -130,8 +129,16 @@ const NavBar = () => {
           </div>
 
           {/* CREATE BUTTON SECTION */}
-       
-        
+          <div className={Style.navbar_container_right_button}>
+            {/* {currentAccount == "" ? ( */}
+              <Button btnName="Connect" handleClick={() => connectWallet()} />
+            {/* ) : ( */}
+              <Button
+                btnName="Create"
+                handleClick={() => router.push("/uploadNFT")}
+              />
+            {/* )} */}
+          </div>
 
           {/* USER PROFILE */}
 
@@ -146,7 +153,7 @@ const NavBar = () => {
                 className={Style.navbar_container_right_profile}
               />
 
-              {profile && <Profile currentAccount={currentAccount} />}
+              {/* {profile && <Profile currentAccount={currentAccount} />} */}
             </div>
           </div>
 

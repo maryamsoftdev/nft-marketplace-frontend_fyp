@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const Button = () => {
+//INTERNAL IMPORT
+import Style from "./button.module.css";
+
+const Button = ({ btnName, handleClick, icon, classStyle }) => {
   return (
-    <div>Button</div>
-  )
-}
+    <div className={Style.box}>
+      <button
+        className={`${Style.button} ${classStyle}`}
+        onClick={() => handleClick()}
+      >
+        {icon} {btnName}
+      </button>
+    </div>
+  );
+};
 
 export default Button;
