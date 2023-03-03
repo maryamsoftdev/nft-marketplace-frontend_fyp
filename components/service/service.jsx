@@ -1,17 +1,19 @@
 import React from 'react'
+// import Image from 'next/image';
 import Image from 'next/image';
 
 // INTERNAL IMPORT 
 import Style from "./service.module.css";
-import Images from "../../img";
-import img from '../../img';
+import images from "../../img";
 
-const service = () =>{
+
+const Service = () =>{
     return(
         <div className={Style.service}>
             <div className={Style.service_box}>
                 <div className={Style.service_box_item}>
-                    <image src={images.service-1} alt="Filter & Discover" width={100} height={100}/>
+                    {/* <image src={images.hero} alt="Filter & Discover" width={100} height={100}/> */}
+                    <Image src={images.service1} alt="Filter & Discover" width={100} height={100}/>
                     <p className={Style.service_box_item_step}>
                         <span>Step 1</span>
                     </p>
@@ -19,7 +21,9 @@ const service = () =>{
                     <p>connect with wallet,discover,buy NFTs,sell your NFT and earn money</p>
                 </div>
                 <div className={Style.service_box_item}>
-                    <image src={images.service-2} alt="Filter & Discover" width={100} height={100}/>
+                    {/* <image src={images.hero} alt="Filter & Discover" width={100} height={100}/> */}
+                    <Image
+            src={images.service2} alt="Filter & Discover" width={100} height={100}/>
                     <p className={Style.service_box_item_step}>
                         <span>Step 1</span>
                     </p>
@@ -27,7 +31,9 @@ const service = () =>{
                     <p>connect with wallet,discover,buy NFTs,sell your NFT and earn money</p>
                 </div>
                 <div className={Style.service_box_item}>
-                    <image src={images.service-3} alt="Filter & Discover" width={100} height={100}/>
+                    {/* <image src={images.hero} alt="Filter & Discover" width={100} height={100}/> */}
+                    <Image
+            src={images.service3}alt="Connect Wallet" width={100} height={100}/>
                     <p className={Style.service_box_item_step}>
                         <span>Step 1</span>
                     </p>
@@ -35,7 +41,8 @@ const service = () =>{
                     <p>connect with wallet,discover,buy NFTs,sell your NFT and earn money</p>
                 </div>
                 <div className={Style.service_box_item}>
-                    <image src={images.service-4} alt="Filter & Discover" width={100} height={100}/>
+                    {/* <image src={images.hero} alt="Filter & Discover" width={100} height={100}/> */}
+                    <Image src={images.service1} alt="Filter & Discover" width={100} height={100}/>
                     <p className={Style.service_box_item_step}>
                         <span>Step 1</span>
                     </p>
@@ -48,4 +55,4 @@ const service = () =>{
     )
 }
 
-export default service
+export default Service;
