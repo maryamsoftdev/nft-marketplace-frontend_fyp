@@ -6,4 +6,4 @@ import HeroSection from "./herosection/herosection";
 import Service from "./service/service";
 import BigNFTSlider from "./BigNFTSlider/BigNFTSlider";
 
-export{Button,Footer,Navbar,HeroSection,Service};
+export{Button,Footer,Navbar,HeroSection,Service,BigNFTSlider};
