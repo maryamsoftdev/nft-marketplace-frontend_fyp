@@ -14,6 +14,7 @@ import Collection from "./Collection/Collection";
 import FollowerTab from "./FollowerTab/FollowerTab";
 import AudioLive from "./AudioLive/AudioLive";
 import Slider from "./Slider/Slider";
+import Brand from "./Brand/Brand"
 
 export{Button,
     Footer,
@@ -30,4 +31,5 @@ export{Button,
     FollowerTab,
     AudioLive,
     Slider,
+    Brand,
 };
