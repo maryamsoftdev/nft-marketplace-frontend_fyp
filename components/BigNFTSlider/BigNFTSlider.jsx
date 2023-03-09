@@ -17,11 +17,11 @@ const BigNFTSlider = () => {
     {
       title: "Hello NFT",
       id: 1,
-      name: "Daulat Hussain",
+      name: "Nabeelah Maryam",
       collection: "GYm",
       price: "00664 ETH",
       like: 243,
-      image: images.user1,
+      image: images.user4,
       nftImage: images.nft_image_1,
       time: {
         days: 21,
@@ -33,7 +33,7 @@ const BigNFTSlider = () => {
     {
       title: "Buddy NFT",
       id: 2,
-      name: "Shoaib Hussain",
+      name: "Alishba Abbas",
       collection: "Home",
       price: "0000004 ETH",
       like: 243,
@@ -49,7 +49,7 @@ const BigNFTSlider = () => {
     {
       title: "Gym NFT",
       id: 3,
-      name: "Raayan Hussain",
+      name: "Sundas Khalid",
       collection: "GYm",
       price: "0000064 ETH",
       like: 243,
@@ -65,11 +65,11 @@ const BigNFTSlider = () => {
     {
       title: "Home NFT",
       id: 4,
-      name: "Raayan Hussain",
+      name: "Azhar Mushtaq",
       collection: "GYm",
       price: "4664 ETH",
       like: 243,
-      image: images.user4,
+      image: images.user1,
       nftImage: images.nft_image_1,
       time: {
         days: 87,
