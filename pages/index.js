@@ -15,6 +15,7 @@ import {HeroSection, Service ,
   AudioLive,
   Slider,
   Brand,
+  Video,
 } from "../components/component-index"
 // import Service from '../components/service/service';
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
     <Service/>
     <BigNFTSlider/>
     <AudioLive/>
+    <Video/>
     <Filter/>
     <NFTCard/>
     <FollowerTab />
