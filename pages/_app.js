@@ -1,15 +1,14 @@
-import '../styles/globals.css'
-//INTERNAL IMPORTS
-import { Navbar, Footer } from '../components/component-index';
+import "../styles/globals.css";
 
-const App =({ Component, pageProps })=> (
+//INTRNAL IMPORT
+import { NavBar, Footer } from "../components/component-index";
 
-    <div>
-    <Navbar/>
+const MyApp = ({ Component, pageProps }) => (
+  <div>
+    <NavBar />
     <Component {...pageProps} />
-    {/* <HeroSection/> */}
-    <Footer/>
-    </div>
+    <Footer />
+  </div>
 );
 
-export default App;
+export default MyApp;

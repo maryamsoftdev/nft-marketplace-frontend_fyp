@@ -1,45 +1,54 @@
-import React from 'react'
-// import {Navbar} from '../components/component-index';
-import{Navbar} from '../components/component-index';
-//INTERNAL IMPORTS
-import Style from "../styles/index.module.css"
-import {HeroSection, Service ,
-  BigNFTSlider,
+import React from "react";
+
+//INTERNAL IMPORT
+import Style from "../styles/index.module.css";
+import {
+  HeroSection,
+  Service,
+  BigNFTSilder,
   Subscribe,
   Title,
   Category,
   Filter,
   NFTCard,
   Collection,
-  FollowerTab,
   AudioLive,
+  FollowerTab,
   Slider,
   Brand,
   Video,
-} from "../components/component-index"
-// import Service from '../components/service/service';
+} from "../components/component-index";
+
 const Home = () => {
   return (
     <div className={Style.homePage}>
-    <HeroSection />
-    <Service/>
-    <BigNFTSlider/>
-    <AudioLive/>
-    <Video/>
-    <Filter/>
-    <NFTCard/>
-    <FollowerTab />
-    <Slider />
-    <Brand/>
-    <Collection/>
-    <Title heading="Browse By Categories"
-    paragraph="Explore The NFTs in Most Featured Categories"
-    />
-    <Category/>
-    <Subscribe/>
+      <HeroSection />
+      <Service />
+      <BigNFTSilder />
+      <Title
+        heading="Audio Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <AudioLive />
+      <FollowerTab />
+      <Slider />
+      <Collection />
+      <Title
+        heading="Featured NFTs"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <Filter />
+      <NFTCard />
+      <Title
+        heading="Browse by category"
+        paragraph="Explore the NFTs in the most featured categories."
+      />
+      <Category />
+      <Subscribe />
+      <Brand />
+      <Video />
     </div>
-  
-  )
-}
+  );
+};
 
 export default Home;
