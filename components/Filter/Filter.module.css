@@ -29,7 +29,6 @@
     font-size: 1.3rem;
     cursor: pointer;
     background-color: var(--main-bg-color);
-    color: var(--icons-color);
 }
 .filter_box_left button:hover{
     border:  1px solid var(--icons-color);

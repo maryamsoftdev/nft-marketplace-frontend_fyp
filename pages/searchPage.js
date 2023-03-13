@@ -2,9 +2,9 @@ import React from "react";
 
 //INTRNAL IMPORT
 import Style from "../styles/searchPage.module.css";
-import { Slider, Brand } from "../components/component-index";
+import { Slider, Brand } from "../components/componentsindex";
 import { SearchBar } from "../SearchPage/searchBarIndex";
-import { Filter } from "../components/component-index";
+import { Filter } from "../components/componentsindex";
 
 import { NFTCardTwo, Banner } from "../collectionPage/collectionIndex";
 import images from "../img";

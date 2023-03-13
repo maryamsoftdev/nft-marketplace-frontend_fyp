@@ -8,19 +8,19 @@ const HelpCenter = () => {
   const helpCenter = [
     {
       name: "About",
-      link: "aboutus",
+      link: "about",
     },
     {
       name: "Contact Us",
-      link: "contactus",
+      link: "contact-us",
     },
     {
       name: "Sign Up",
-      link: "signUp",
+      link: "sign-up",
     },
     {
-      name: "LogIn",
-      link: "login",
+      name: "Sign In",
+      link: "sign-in",
     },
     {
       name: "Subscription",
@@ -30,7 +30,7 @@ const HelpCenter = () => {
   return (
     <div className={Style.box}>
       {helpCenter.map((el, i) => (
-        <div className={Style.helpCenter} key={i + 1}>
+        <div className={Style.helpCenter}>
           <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
         </div>
       ))}

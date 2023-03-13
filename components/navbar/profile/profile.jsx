@@ -9,7 +9,7 @@ import Link from "next/link";
 import Style from "./Profile.module.css";
 import images from "../../../img";
 
-const Profile = ({ currentAccount }) => {
+const Profile = () => {
   return (
     <div className={Style.profile}>
       <div className={Style.profile_account}>
@@ -23,7 +23,7 @@ const Profile = ({ currentAccount }) => {
 
         <div className={Style.profile_account_info}>
           <p>Shoaib Bhai</p>
-          <small>{currentAccount.slice(0, 18)}..</small>
+          <small>X038499382920203...</small>
         </div>
       </div>
 
@@ -32,19 +32,19 @@ const Profile = ({ currentAccount }) => {
           <div className={Style.profile_menu_one_item}>
             <FaUserAlt />
             <p>
-              <Link href={{ pathname: "/author" }}>My Profile</Link>
+              <Link href={{ pathname: "/myprofile" }}>My Profile</Link>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <FaRegImage />
             <p>
-              <Link href={{ pathname: "/author" }}>My Items</Link>
+              <Link href={{ pathname: "/my-items" }}>My Items</Link>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <FaUserEdit />
             <p>
-              <Link href={{ pathname: "/account" }}>Edit Profile</Link>
+              <Link href={{ pathname: "/edit-profile" }}>Edit Profile</Link>
             </p>
           </div>
         </div>
@@ -53,13 +53,13 @@ const Profile = ({ currentAccount }) => {
           <div className={Style.profile_menu_one_item}>
             <MdHelpCenter />
             <p>
-              <Link href={{ pathname: "/contactus" }}>Help</Link>
+              <Link href={{ pathname: "/help" }}>Help</Link>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>
-              <Link href={{ pathname: "/aboutus" }}>About Us</Link>
+              <Link href={{ pathname: "/disconnet" }}>Disconnet</Link>
             </p>
           </div>
         </div>

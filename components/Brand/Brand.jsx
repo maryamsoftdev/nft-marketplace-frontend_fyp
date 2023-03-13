@@ -4,7 +4,7 @@ import Image from "next/image";
 //INTERNAL IMPORT
 import Style from "./Brand.module.css";
 import images from "../../img";
-import { Button } from "../../components/component-index";
+import { Button } from "../../components/componentsindex.js";
 
 const Brand = () => {
   return (

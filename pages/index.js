@@ -17,7 +17,7 @@ import {
   Slider,
   Brand,
   Video,
-} from "../components/component-index";
+} from "../components/componentsindex";
 
 const Home = () => {
   return (

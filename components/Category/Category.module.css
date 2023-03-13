@@ -43,7 +43,7 @@
 @media screen and (min-device-width: 320px) and (max-device-width: 425px) {
 
     .box_category{
-        width: 95%;
+        width: 90%;
     }
     .category{
         grid-template-columns: 1fr;
@@ -61,3 +61,4 @@
         grid-template-columns: repeat(3,1fr);
     }
 }
+
